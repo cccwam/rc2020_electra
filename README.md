@@ -5,6 +5,8 @@ This project was undertaken as part of the course [IFT6268 Self Supervised Repre
 
 The preprocessing process is embedding and cached with the command lines for pretraining and downstream tasks.
 
+A pretrained model with 1M steps training is also available in this repository.
+
 This work leverages HuggingFace libraries (Transformers, Datasets, Tokenizers) and PyTorch (1.7.0).
 
 For more information, please refer to the associated [paper (under review)](To be added later).
