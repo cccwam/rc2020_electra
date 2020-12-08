@@ -1,0 +1,31 @@
+# HuggingFace
+transformers==3.4.0
+tokenizers==0.9.2
+datasets
+
+# Pytorch
+torch==1.7.0
+torchvision
+
+# Data science
+numpy
+scipy
+xlrd
+pandas
+tabulate
+statsmodels
+scikit-learn
+spacy
+
+# ML visualization
+tensorboard==2.3.0
+wandb
+seaborn
+matplotlib
+
+# Utils
+fire
+tqdm
+jupyterlab
+ipywidgets
+packaging
