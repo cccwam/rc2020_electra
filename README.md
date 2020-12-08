@@ -3,6 +3,10 @@
 This repository contains a reimplementation in PyTorch of [ELECTRA](https://openreview.net/pdf?id=r1xMH1BtvB) for the [Reproducibility Challenge 2020](https://paperswithcode.com/rc2020).
 This project was undertaken as part of the course [IFT6268 Self Supervised Representation Learning](https://sites.google.com/view/ift6268-a2020/schedule?authuser=0) at [Mila / University of Montreal](https://mila.quebec).
 
+The preprocessing process is embedding and cached with the command lines for pretraining and downstream tasks.
+
+This work leverages HuggingFace libraries (Transformers, Datasets, Tokenizers) and PyTorch (1.7.0).
+
 For more information, please refer to the associated [paper (under review)](To be added later).
 
 ## Main results
@@ -107,6 +111,6 @@ python run_pretraining.py --mlm_probability 0.15  --mlm_replacement_probability 
 ## Requirements
 
 ```
-conda install pytorch torchvision torchaudio -c pytorch
+conda install pytorch=1.7.0 torchvision torchaudio -c pytorch
 pip install -r requirements
 ```
