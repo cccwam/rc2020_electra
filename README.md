@@ -7,7 +7,7 @@ The preprocessing process is embedding and cached with the command lines for pre
 
 A pretrained model with 1M steps training is also available in this repository.
 
-This work leverages HuggingFace libraries (Transformers, Datasets, Tokenizers) and PyTorch (1.7.0).
+This work leverages HuggingFace libraries (Transformers, Datasets, Tokenizers) and PyTorch (1.7.1).
 
 For more information, please refer to the associated [paper (under review)](To be added later).
 
@@ -19,10 +19,10 @@ My results are similar to the original ELECTRA’s implementation (Clark et al. 
 ### Training behaviour
 
  Original implementation
-![Training behaviour - Original](https://github.com/cccwam/ift6268/blob/ReleaseCode/images/Electra%20RC2020%20-%20Learning%20-%20Original.png)
+![Training behaviour - Original](https://user-images.githubusercontent.com/1091306/76335698-256fb500-62b2-11ea-9fee-e39aca5cae24.png)
 
 This implementation
-![Training behaviour - Mine](https://github.com/cccwam/ift6268/blob/ReleaseCode/images/Electra%20RC2020%20-%20Learning.png)
+![Training behaviour - Mine](https://github.com/cccwam/rc2020_electra/blob/latest_branch/images/Electra%20RC2020%20-%20Learning.png)
 
 ### Results on GLUE dev set
 
