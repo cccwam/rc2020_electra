@@ -24,9 +24,11 @@ My results are similar to the original ELECTRA’s implementation (Clark et al. 
 This implementation
 ![Training behaviour - Mine](https://github.com/cccwam/rc2020_electra/blob/latest_branch/images/Electra%20RC2020%20-%20Learning.png)
 
+More details are available in [WandB](https://wandb.ai/cccwam/rc2020_electra_pretraining/reports/RC2020-Replication-of-ELECTRA-Clark-et-al-2020---VmlldzozODYzMjk)
+
 ### Results on GLUE dev set
 
-| Model | CoLA (Mcc)  | SST-2 (Acc)   | MRPC (Acc)  | STS-B(Spc)   | QQP (Acc)  | MNLI (Acc)  | QNLI (Acc)  | RTE (Acc)   | AVG | GLUE* |   
+| Model | CoLA (Mcc)  | SST-2 (Acc)   | MRPC (Acc)  | STS-B(Spc)   | QQP (Acc)  | MNLI (Acc)  | QNLI (Acc)  | RTE (Acc)   | AVG | GLUE |   
 |-------|------|-------|------|-------|------|------|------|------ |-----|-------|
 |Original| 56.8 | 88.3 | 87.4 | 86.8 | 88.3 | 78.9 | 87.9 | 68.5 | 80.4 | |
 |Mine    | 53.5 | 88.7 | 87.6 | 85.2 | 86.1 | 80.2 | 87.5 | 61.5 | 79.2 | 76.7 |   
@@ -43,9 +45,10 @@ This implementation
 
 ## Main differences with Electra original implementation
 
-- Preprocessing. This reimplementation uses Spacy for sentences segmentation whereas the original implementation don't perform sentence segmentations. 
-- Use of relative position embeddings in addition to absolute position embeddings.
-- Use of sentence embeddings to refer the id of the sentence (similar to token type id in Electra/Bert but with more ids)
+- Preprocessing. This reimplementation caches the tokenization step and dynamically pick a random segment during training. The segmentation is therefore dynamic instead of static in the original implementation. Furthermore, this reimplementation handles completely the download of pretraining datasets with [HuggingFace datasets library](https://github.com/huggingface/datasets).
+- Fine-tuning, the original implementation has got a discrepancy with the paper for the layerwise learning rate decay, see [Github](https://github.com/google-research/electra/issues/51).
+- Task specific data augmentation. The original implementation uses a technique, called double_unordered, to increase by 2 the dataset for MRPC and STS. This implementation doesn't use any task specific data augmentation, see [Github](https://github.com/google-research/electra/issues/98).
+
 
 For more information, please refer to the [paper (under review)](To be added later).
 
@@ -116,3 +119,10 @@ python run_pretraining.py --mlm_probability 0.15  --mlm_replacement_probability 
 conda install pytorch=1.7.1 torchvision torchaudio -c pytorch
 pip install -r requirements
 ```
+
+## Additional resources
+
+- [ML Reproducibility Challenge 2020](https://paperswithcode.com/rc2020)
+
+- [Original implementation](https://github.com/google-research/electra)
+- [Reimplementation of ELECTRA with FastAI and PyTorch](https://github.com/richarddwang/electra_pytorch)
