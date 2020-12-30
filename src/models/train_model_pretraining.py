@@ -131,8 +131,8 @@ def train_model_pretraining(
 
         metric_to_train_generator: str = "eval_is_fake_token_AUC",
         threshold_to_train_generator: float = 0.0,
-        relative_position_embeddings: bool = True,
-        sequence_embeddings: bool = True,
+        relative_position_embeddings: bool = False,
+        sequence_embeddings: bool = False,
         experiment_name: Optional[str] = None,
 ) -> Optional[Dict[str, float]]:
     """
