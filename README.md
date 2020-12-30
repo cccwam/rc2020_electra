@@ -29,7 +29,7 @@ This implementation
 | Model | CoLA (Mcc)  | SST-2 (Acc)   | MRPC (Acc)  | STS-B(Spc)   | QQP (Acc)  | MNLI (Acc)  | QNLI (Acc)  | RTE (Acc)   | AVG | GLUE* |   
 |-------|------|-------|------|-------|------|------|------|------ |-----|-------|
 |Original| 56.8 | 88.3 | 87.4 | 86.8 | 88.3 | 78.9 | 87.9 | 68.5 | 80.4 | |
-|Mine    | 51.9 | 88.5 | 90.7 | 85.5 | 85.8 | 79.5 | 87.8 | 62.2 | 79.0 | 76.5 |   
+|Mine    | 53.5 | 88.7 | 87.6 | 85.2 | 86.1 | 80.2 | 87.5 | 61.5 | 79.2 | 76.7 |   
 
 ### Efficiency analysis
 
@@ -38,7 +38,7 @@ This implementation
 |GPT| 110M | 30d on 8 P600     | 0.95 | 77.9 | 75.4   | 0.17 | 0.18  |
 |DistilBERT| 67M | 90h on 8 V100     | 0.16 |  | 77.0  |  | 0.21 |
 |ELECTRA-Original| 14M | 4d on 1 V100     | 0.02 | 80.4 |      | 0.03 |  |
-|ELECTRA-Mine    | 14M | 5d on 1 RTX 3090 | 0.03 | 79.0 | 76.5 | 0.03 | 0.03 |   
+|ELECTRA-Mine    | 14M | 3.75d on 1 RTX 3090 | 0.03 | 79.2 | 76.7 | 0.05 | 0.06 |   
 
 
 ## Main differences with Electra original implementation
@@ -56,7 +56,7 @@ For more information, please refer to the [paper (under review)](To be added lat
 @misc{cccwamif93:online,
 author = {François Mercier},
 title = {ML Reproducibility Challenge 2020: Electra reimplementation using PyTorch and Transformers},
-howpublished = {\url{https://github.com/cccwam/ift6268}},
+howpublished = {\url{https://github.com/cccwam/rc2020_electra}},
 month = {},
 year = {2020},
 note = {(Accessed on 12/07/2020)}
@@ -113,6 +113,6 @@ python run_pretraining.py --mlm_probability 0.15  --mlm_replacement_probability 
 ## Requirements
 
 ```
-conda install pytorch=1.7.0 torchvision torchaudio -c pytorch
+conda install pytorch=1.7.1 torchvision torchaudio -c pytorch
 pip install -r requirements
 ```
