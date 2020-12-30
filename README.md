@@ -5,7 +5,7 @@ This project was undertaken as part of the course [IFT6268 Self Supervised Repre
 
 The preprocessing process is embedding and cached with the command lines for pretraining and downstream tasks.
 
-A pretrained model with 1M steps training is also available in this repository.
+A pretrained model with 1M steps training is also available via this [link](https://wandb.ai/cccwam/rc2020_electra_pretraining/artifacts/model/pretrained_model/0657b16512c9728d08c0/files).
 
 This work leverages HuggingFace libraries (Transformers, Datasets, Tokenizers) and PyTorch (1.7.1).
 
