@@ -92,7 +92,7 @@ _dataset_infos: List[DatasetInfo] = [
     # Wikipedia
     DatasetInfo(name="wikipedia", subset="20200501.en",
                 num_clf_classes=0, num_regr=0,
-                text_columns=["text"], sentence_segmentation=True,
+                text_columns=["text"], sentence_segmentation=False,
                 validation_set_names=[], test_set_names=[]),
 
     # BookCorpus
