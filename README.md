@@ -57,7 +57,7 @@ For more information, please refer to the [paper (under review)](To be added lat
 
 ```
 @misc{cccwamif93:online,
-author = {François Mercier},
+author = {Anonymous},
 title = {ML Reproducibility Challenge 2020: Electra reimplementation using PyTorch and Transformers},
 howpublished = {\url{https://github.com/cccwam/rc2020_electra}},
 month = {},
