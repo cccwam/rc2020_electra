@@ -56,13 +56,12 @@ For more information, please refer to the [paper (under review)](To be added lat
 ## How to cite this work
 
 ```
-@misc{cccwamif93:online,
-author = {Anonymous},
-title = {ML Reproducibility Challenge 2020: Electra reimplementation using PyTorch and Transformers},
-howpublished = {\url{https://github.com/cccwam/rc2020_electra}},
-month = {},
-year = {2020},
-note = {(Accessed on 12/07/2020)}
+@misc{
+mercier2021efficient,
+title={Efficient transfer learning for {NLP} with {ELECTRA}},
+author={Fran{\c{c}}ois MERCIER},
+year={2021},
+url={https://openreview.net/forum?id=Or5sv1Pj6od}
 }
 ```
 
