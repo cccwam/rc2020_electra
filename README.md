@@ -9,7 +9,7 @@ A pretrained model with 1M steps training is also available via this [link](http
 
 This work leverages HuggingFace libraries (Transformers, Datasets, Tokenizers) and PyTorch (1.7.1).
 
-For more information, please refer to the associated [paper (under review)](To be added later).
+For more information, please refer to the associated [paper](https://arxiv.org/abs/2104.02756).
 
 ## Main results
 
